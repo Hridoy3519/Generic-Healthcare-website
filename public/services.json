@@ -1,0 +1,49 @@
+[
+    {
+        "key": "B002RL8IYA",
+        "title": "General Dentistry",
+        "description": "A general dentist is your primary care dental provider. This dentist diagnoses, treats, and manages your overall oral health care needs, including gum care, root canals, fillings, crowns, veneers, bridges, and preventive education.",
+        "img": "https://i.ibb.co/YLd3nby/services-1.jpg"
+    },
+
+    {
+        "key": "B002RL8IYB",
+        "title": "Cosmetic Dentistry",
+        "description": "This method of professional oral care focuses on improving the appearance of your mouth, teeth, gums, and overall smile. Common procedures include teeth whitening, veneers, fillings, and implants.",
+        "img": "https://i.ibb.co/xmjQ8hT/services-2.jpg"
+    },
+
+    {
+        "key": "B002RL8IYC",
+        "title": "Dental Implants",
+        "description": "Dental implants are replacement tooth roots. Implants provide a strong foundation for fixed (permanent) or removable replacement teeth that are made to match your natural teeth.",
+        "img": "https://i.ibb.co/28YJn6H/services-3.jpg"
+    },
+
+    {
+        "key": "B002RL8IYD",
+        "title": "Orthodontics",
+        "description": "Orthodontics is a branch of dentistry that treats malocclusion, a condition in which the teeth are not correctly positioned when the mouth is closed. This results in an improper bite. An orthodontist specializes in making the teeth straight.",
+        "img": "https://i.ibb.co/2cNrkhw/services-4.jpg"
+    },
+
+    {
+        "key": "B002RL8IYE",
+        "title": "Teeth Whitening",
+        "description": "Everyone notices a bright, white, glowing smile. And everyone notices how confident you feel when you have that beautiful smile. That’s why we utilize long-lasting Teeth Whitening procedure — because we want you to glow with pride and confidence.",
+        "img": "https://i.ibb.co/Yphxm0X/services-5.jpg"
+    },
+
+    {
+        "key": "B002RL8IYF",
+        "title": "Teeth Cleaning",
+        "description": "Many people dread teeth cleanings. Between the prodding, strange noises, and occasional jaw discomfort, it’s easy to understand their apprehension. But for most, a teeth cleaning is simple and painless.",
+        "img": "https://i.ibb.co/HG0XYc4/services-6.jpg"
+    }
+
+]
+
+
+
+
+
