@@ -1,0 +1,23 @@
+.contact{
+    background-color:#F7F7F7;
+    box-sizing: border-box;
+}
+
+.contact h1{
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.lady-pic{
+    width: 80%;
+}
+
+@media only screen and (max-width:688px) {
+    .contact h1{
+        font-size: 1.5rem;
+    }
+
+    .contact-no{
+        display: none;
+    }
+}

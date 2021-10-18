@@ -6,7 +6,7 @@ const DentalService = (props) => {
   return (
     <Col>
       <Card className="h-100 card">
-        <Card.Img variant="top" src={img} />
+        <Card.Img className="card-img" variant="top" src={img} />
         <Card.Body className="card-body">
           <Card.Title> {title}</Card.Title>
           <Card.Text>

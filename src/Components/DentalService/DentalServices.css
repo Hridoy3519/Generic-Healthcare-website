@@ -1,6 +1,33 @@
 .card-body{
     padding: 10px;
 }
+
+.card-img{
+    transition: 0.25s all linear;
+}
+
+.card{
+   overflow:hidden;
+   transition: 0.25s all linear;
+}
+
 .card-footer{
     background-color: white;
+    transition: 0.25s all linear;
 }
+
+.card:hover{
+    background-color: #06A3DA;
+    transform: translateY(-10px);
+    color: white;
+}
+
+.card:hover .card-footer{
+    background-color: #06A3DA;
+    border: none;
+}
+
+.card:hover .card-img{
+    transform: scaleX(1.1);
+}
+
