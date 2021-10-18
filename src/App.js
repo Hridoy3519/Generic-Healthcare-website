@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import About from "./Components/About/About";
@@ -6,6 +7,8 @@ import Appointment from "./Components/Appointment/Appointment";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
+import Login from "./Components/Login/Login";
+import Signup from "./Components/Sigup/Signup";
 
 function App() {
   return (
@@ -25,6 +28,17 @@ function App() {
           <Route path="/appointment">
             <Appointment></Appointment>
           </Route>
+          <Container
+            className="d-flex align-items-center justify-content-center"
+            style={{ minHeight: "100vh" }}
+          >
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/signup">
+              <Signup></Signup>
+            </Route>
+          </Container>
         </Switch>
         <Footer></Footer>
       </Router>

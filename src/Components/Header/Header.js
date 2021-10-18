@@ -6,7 +6,7 @@ import './Header.css';
 const Header = () => {
   return (
     <div>
-      <Navbar className="navbar" bg="dark" collapseOnSelect expand="lg"  variant="dark">
+      <Navbar className="navbar fixed-top" bg="dark" collapseOnSelect expand="lg"  variant="dark">
         <Container>
           <Navbar.Brand className="navbar-brand" href="#home">Generic</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -17,10 +17,7 @@ const Header = () => {
               <Nav.Link as={Link} className="nav-link" to="/appointment">Appointment</Nav.Link>
             </Nav>
             <Nav className="nav">
-              <Nav.Link  className="nav-link" href="#deets">More deets</Nav.Link>
-              <Nav.Link  className="nav-link" eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
+              <Nav.Link as={Link} className="nav-link login" to="/login">Log In</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -30,3 +27,7 @@ const Header = () => {
 };
 
 export default Header;
+
+// <Nav.Link  className="nav-link" eventKey={2} href="#memes">
+//                 Dank memes
+//               </Nav.Link>

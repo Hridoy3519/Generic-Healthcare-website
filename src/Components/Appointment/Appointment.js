@@ -1,9 +1,12 @@
 import React from 'react';
+import AppointmentForm from '../AppointmentForm/AppointmentForm';
+import PageHeader from '../PageHeader/PageHeader';
 
 const Appointment = () => {
     return (
         <div>
-            Appointment
+            <PageHeader page="Appointment"></PageHeader>
+            <AppointmentForm></AppointmentForm>
         </div>
     );
 };

@@ -12,3 +12,15 @@
     color: white;
     transition: 0.6s;
 }
+
+.login{
+    padding: 5px;
+    background-color: #06A3DB;
+    color: white;
+    border-radius: 5px;
+}
+
+.navbar .nav .login:hover{
+    color: black;
+    transition: 0.6s;
+}

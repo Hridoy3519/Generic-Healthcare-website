@@ -1,0 +1,9 @@
+.parallax{
+    background: url("https://i.ibb.co/5cRcrbD/Hospital.jpg") center/cover no-repeat fixed;
+    padding: 100px 0px;
+}
+
+.parallax-inner{
+    width: 50%;
+    background-color: white;
+}

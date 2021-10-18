@@ -1,33 +1,33 @@
-.card-body{
+.customized-card-body{
     padding: 10px;
 }
 
-.card-img{
+.customized-card-img{
     transition: 0.25s all linear;
 }
 
-.card{
+.customized-card{
    overflow:hidden;
    transition: 0.25s all linear;
 }
 
-.card-footer{
+.customized-card-footer{
     background-color: white;
     transition: 0.25s all linear;
 }
 
-.card:hover{
+.customized-card:hover{
     background-color: #06A3DA;
     transform: translateY(-10px);
     color: white;
 }
 
-.card:hover .card-footer{
+.customized-card:hover .customized-card-footer{
     background-color: #06A3DA;
     border: none;
 }
 
-.card:hover .card-img{
+.customized-card:hover .customized-card-img{
     transform: scaleX(1.1);
 }
 

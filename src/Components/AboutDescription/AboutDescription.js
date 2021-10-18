@@ -13,8 +13,10 @@ const AboutDescription = () => {
               <span className="colored-text">of Specialists</span>{" "}
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Generic Dental CARE is the best & leading dental treatment
+              provider in Dhaka, Bangladesh, with a specialized, Dental implant,
+              Endodontic, Pediatric operative, Prosthodontic, oral surgery, and
+              Orthodontic Center.
             </p>
           </div>
         </div>
