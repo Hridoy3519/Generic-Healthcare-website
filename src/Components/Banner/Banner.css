@@ -1,0 +1,28 @@
+.banner{
+    background: linear-gradient(rgba(139, 180, 235, 0.5), rgba(0, 0, 0, 0.7)), url(https://i.ibb.co/MsBz4Mb/Beautiful-lady-in-the-dentist-s-office-Woman-in-a-uniform.jpg) center/cover no-repeat;
+    height: 80vh;
+}
+
+.colored-text{
+    color: #06A3DA;
+}
+
+.banner h1{
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.banner-description{
+    width: 60%;
+    color: white;
+}
+
+.generic-customized-btn{
+    background: #06A3DA;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+}
+/* linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)) */
