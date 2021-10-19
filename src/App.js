@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import ServiceDetail from "./Components/ServiceDetail/ServiceDetail";
 import Signup from "./Components/Sigup/Signup";
 import AuthProvider from "./Context/AuthProvider";
@@ -31,9 +32,9 @@ function App() {
             <Route path="/appointment">
               <Appointment></Appointment>
             </Route>
-            <Route path="/service/:serviceId">
+            <PrivateRoute path="/service/:serviceId">
               <ServiceDetail></ServiceDetail>
-            </Route>
+            </PrivateRoute>
             <Container
               className="d-flex align-items-center justify-content-center"
               style={{ minHeight: "100vh" }}

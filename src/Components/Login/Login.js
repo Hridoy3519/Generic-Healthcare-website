@@ -1,18 +1,39 @@
 import React, { useState } from "react";
 import { Card, Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { userLogIn } = useAuth();
+  const { setIsLoading, userLogIn, signInWithGoogle } = useAuth();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
+  };
+
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_url = location.state?.from || "/home";
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle().then((result) => {
+      history.push(redirect_url);
+    }).finally(() => setIsLoading(false));
+  };
+
+  const handleUserLogin = () => {
+    userLogIn(email,password)
+      .then((userCredential) => {
+        history.push(redirect_url);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => setIsLoading(false));
   };
   return (
     <div className="w-100 login-page" style={{ maxWidth: "480px" }}>
@@ -40,7 +61,7 @@ const Login = () => {
             <Button
               onClick={(e) => {
                 e.preventDefault();
-                userLogIn(email, password);
+                handleUserLogin();
               }}
               className="w-100"
               variant="primary"
@@ -52,6 +73,9 @@ const Login = () => {
           <div className="text-center mt-2">
             Need an Account? <Link to="/signup">Sign Up</Link>
           </div>
+          <div className="text-center mt-2">
+            <Button onClick={handleGoogleSignIn}>Google Sign In</Button>
+          </div>
         </Card.Body>
       </Card>
     </div>
@@ -61,3 +85,9 @@ const Login = () => {
 export default Login;
 
 // {error && <Alert variant="danger"> {error}</Alert>}
+
+// .then((result) => {
+//   setUser(result.user);
+//   setError("");
+// })
+// .catch((error) => {});
