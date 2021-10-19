@@ -24,14 +24,14 @@ const ServiceDetail = () => {
   }, [services]);
 
   return (
-    <Container className="m-5">
+    <Container className="my-5 service-detail-container">
       <div className="row detail">
         <div className="col-md-6">
           <h4 className="colored-text text-center">Service </h4>
           <div className="d-flex justify-content-center align-items-center">
             <Card className="detail-card">
               <Card.Img
-                className="detail-card-img"
+                className="detail-card-img img-fluid"
                 variant="top"
                 src={currentService?.img}
               />

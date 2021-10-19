@@ -8,3 +8,9 @@
 .detail-card-img{
     height: 350px;
 }
+
+@media only screen and (max-width:688px) {
+    .service-detail-container{
+        margin: 0;
+    }
+}
