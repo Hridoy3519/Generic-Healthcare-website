@@ -99,6 +99,7 @@ const useFirebase = () => {
   return {
     user,
     error,
+    setError,
     signInWithGoogle,
     logOut,
     userSignUp,

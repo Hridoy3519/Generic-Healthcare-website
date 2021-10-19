@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import NotFound from "./Components/NotFound/NotFound";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import ServiceDetail from "./Components/ServiceDetail/ServiceDetail";
 import Signup from "./Components/Sigup/Signup";
@@ -35,17 +36,15 @@ function App() {
             <PrivateRoute path="/service/:serviceId">
               <ServiceDetail></ServiceDetail>
             </PrivateRoute>
-            <Container
-              className="d-flex align-items-center justify-content-center"
-              style={{ minHeight: "100vh" }}
-            >
-              <Route path="/login">
-                <Login></Login>
-              </Route>
-              <Route path="/signup">
-                <Signup></Signup>
-              </Route>
-            </Container>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/signup">
+              <Signup></Signup>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </Router>

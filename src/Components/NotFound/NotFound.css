@@ -1,0 +1,5 @@
+.error{
+    display: grid;
+    height: 70vh;
+    place-items: center;
+}
