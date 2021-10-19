@@ -9,7 +9,8 @@ const Services = () => {
     fetch("./services.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
-  });
+  },[]);
+
   return (
     <Container className="services">
       <h5 className="colored-text text-center mt-5">

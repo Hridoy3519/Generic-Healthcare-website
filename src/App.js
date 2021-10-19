@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import ServiceDetail from "./Components/ServiceDetail/ServiceDetail";
 import Signup from "./Components/Sigup/Signup";
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/appointment">
             <Appointment></Appointment>
+          </Route>
+          <Route path="/service/:serviceId">
+            <ServiceDetail></ServiceDetail>
           </Route>
           <Container
             className="d-flex align-items-center justify-content-center"

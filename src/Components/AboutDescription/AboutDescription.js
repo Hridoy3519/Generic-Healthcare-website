@@ -3,8 +3,8 @@ import { Container } from "react-bootstrap";
 import "./AboutDescription.css";
 const AboutDescription = () => {
   return (
-    <Container>
-      <div className="row p-5 about-description">
+    <Container className="mt-4">
+      <div className="row about-description">
         <div className="col-md-6 d-flex justify-content-center align-items-center">
           <div>
             <h1>Our Clients are Our Priority, We Offer</h1>

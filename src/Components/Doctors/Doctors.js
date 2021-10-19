@@ -9,7 +9,7 @@ const Doctors = () => {
     fetch("./doctor.json")
       .then((res) => res.json())
       .then((data) => setDoctors(data));
-  });
+  },[]);
 
   return (
     <Container className="mb-5">
