@@ -8,7 +8,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const { userSignUp , signInWithGoogle } = useAuth();
+  const {error, userSignUp , signInWithGoogle } = useAuth();
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -29,6 +29,7 @@ const Signup = () => {
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
           <Form>
+            {error && <Alert variant="danger"> {error} </Alert>}
             <Form.Group className="mb-3" controlId="formBasicName">
               <Form.Label>Name</Form.Label>
               <Form.Control

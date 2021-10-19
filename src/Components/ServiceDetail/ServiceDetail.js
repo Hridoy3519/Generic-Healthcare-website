@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Container} from "react-bootstrap";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import "./ServiceDetail.css";
 const ServiceDetail = () => {
   const { serviceId } = useParams();
@@ -51,7 +52,13 @@ const ServiceDetail = () => {
           </div>
           <h4 className="colored-text text-center">{currentService?.Job}</h4>
         </div>
-        <button className="generic-customized-btn">Book Appointment</button>
+        <div className="text-center">
+          <Link to="/appointment">
+            <button className="generic-customized-btn text-center">
+              Book Appointment
+            </button>
+          </Link>
+        </div>
       </div>
     </Container>
   );

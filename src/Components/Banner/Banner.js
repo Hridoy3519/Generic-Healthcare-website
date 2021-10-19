@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Banner.css";
 const Banner = () => {
   return (
@@ -16,7 +17,9 @@ const Banner = () => {
           Center.
         </p>
 
-        <button className="generic-customized-btn">Book Appointment</button>
+        <Link to="/appointment">
+          <button className="generic-customized-btn">Book Appointment</button>
+        </Link>
       </div>
     </div>
   );

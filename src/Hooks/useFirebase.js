@@ -15,7 +15,7 @@ import initializeAuthentication from "../Firebase/Firebase.init";
 initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
-  const [error, setError] = useState({});
+  const [error, setError] = useState('');
   const [signedIn, setSignedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -40,7 +40,6 @@ const useFirebase = () => {
         .then((userCredential) => {
           updateUserInfo(name);
           setUser(userCredential.user);
-          setError("");
         })
         .catch((error) => {
           setError("Failed to Sign Up");
