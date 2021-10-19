@@ -1,6 +1,6 @@
 # Generic: Dental Care Website
 
-To view the live Site [Click Here](https://generic-dental-care.web.app/appointment).
+To view the live Site [Click Here](https://generic-dental-care.web.app/).
 
 ## About
 
