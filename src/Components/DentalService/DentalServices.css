@@ -1,5 +1,9 @@
+.customized-card{
+    border: 0px;
+}
+
 .customized-card-body{
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .customized-card-img{
@@ -14,6 +18,8 @@
 .customized-card-footer{
     background-color: white;
     transition: 0.25s all linear;
+    padding: 0;
+    border: none;
 }
 
 .customized-card:hover{

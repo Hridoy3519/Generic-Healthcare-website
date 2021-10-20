@@ -7,7 +7,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const { error, setError , setIsLoading, userLogIn, signInWithGoogle } = useAuth();
-
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -20,6 +19,7 @@ const Login = () => {
   const redirect_url = location.state?.from || "/home";
 
   const handleGoogleSignIn = () => {
+    setError("");
     signInWithGoogle()
       .then((result) => {
         history.push(redirect_url);
@@ -31,6 +31,7 @@ const Login = () => {
   };
 
   const handleUserLogin = () => {
+    setError("");
     userLogIn(email, password)
       .then((userCredential) => {
         history.push(redirect_url);

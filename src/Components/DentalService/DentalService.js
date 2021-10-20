@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Col } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./DentalServices.css";
 const DentalService = (props) => {
@@ -14,7 +14,7 @@ const DentalService = (props) => {
         </Card.Body>
         <Card.Footer className="customized-card-footer text-center">
           <Link to={`service/${key}`}>
-            <Button>See Details</Button>
+            <button className="generic-customized-btn w-100">Details</button>
           </Link>
         </Card.Footer>
       </Card>

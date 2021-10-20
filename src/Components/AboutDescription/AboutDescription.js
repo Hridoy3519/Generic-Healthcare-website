@@ -18,6 +18,19 @@ const AboutDescription = () => {
               Endodontic, Pediatric operative, Prosthodontic, oral surgery, and
               Orthodontic Center.
             </p>
+
+            <div className="row">
+              <div className="col-md-6">
+                <div><h5><i className="fas fa-check-circle"></i> Complete Crown</h5></div>
+                <div><h5><i className="fas fa-check-circle"></i> Dental Implants</h5></div>
+                <div><h5><i className="fas fa-check-circle"></i> Dental X-ray</h5></div>
+              </div>
+              <div className="col-md-6">
+                <div><h5><i className="fas fa-check-circle"></i> Cosmetic Filling</h5></div>
+                <div><h5><i className="fas fa-check-circle"></i> Root Canal</h5></div>
+                <div><h5><i className="fas fa-check-circle"></i> Teeth Whitening</h5></div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-md-6 d-flex justify-content-center">

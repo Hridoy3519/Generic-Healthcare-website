@@ -1,0 +1,36 @@
+.upper-div{
+    padding: 0;
+}
+.gallery-image-div{
+    margin: 0;
+}
+
+.gallery-image-div{
+    overflow: hidden;
+}
+
+.gallery-image-div img{
+    width: 100%;
+    height: 200px;
+}
+
+.gallery-image-div:hover img{
+    transform: scale(1.2);
+    transition: 0.5s all linear;
+}
+
+.img-1{
+    border-top-left-radius: 15px;
+}
+
+.img-2{
+    border-top-right-radius: 15px;
+}
+
+.img-3{
+    border-bottom-left-radius: 15px;
+}
+
+.img-4{
+    border-bottom-right-radius: 15px;
+}

@@ -15,7 +15,7 @@ import initializeAuthentication from "../Firebase/Firebase.init";
 initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [signedIn, setSignedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -23,14 +23,17 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
 
   const signInWithGoogle = () => {
-      setIsLoading(true);
+    setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
-      
   };
 
   //Email and password sign up
   const userSignUp = (email, password, confirmPassword, name) => {
-      setIsLoading(true);
+    setIsLoading(true);
+    if (!name.length) {
+      setError("Name Field Must not be left empty");
+      return;
+    }
     if (password.length < 6) {
       setError("Password Must be at least 6 characters long!");
       return;
@@ -42,7 +45,7 @@ const useFirebase = () => {
           setUser(userCredential.user);
         })
         .catch((error) => {
-          setError("Failed to Sign Up");
+          setError(error.message);
         })
         .finally(() => setIsLoading(false));
     } else {
@@ -51,13 +54,13 @@ const useFirebase = () => {
   };
 
   const updateUserInfo = (name) => {
-      setIsLoading(true);
+    setIsLoading(true);
     updateProfile(auth.currentUser, {
       displayName: name,
     })
       .then(() => {
-          setUser(auth.currentUser);
-          setSignedIn(true);
+        setUser(auth.currentUser);
+        setSignedIn(true);
       })
       .catch((error) => {
         setError(error.message);
@@ -66,13 +69,12 @@ const useFirebase = () => {
   };
 
   const userLogIn = (email, password) => {
-      setIsLoading(true);
+    setIsLoading(true);
     if (password.length < 6) {
       setError("Incorrect password");
       return;
     }
     return signInWithEmailAndPassword(auth, email, password);
-     
   };
 
   const logOut = () => {
@@ -80,13 +82,15 @@ const useFirebase = () => {
       .then(() => {
         setUser({});
       })
-      .catch((error) => {})
+      .catch((error) => {
+        setError(error.message);
+      })
       .finally(() => setIsLoading(false));
   };
 
   //observer
   useEffect(() => {
-      setIsLoading(true);
+    setIsLoading(true);
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
@@ -104,7 +108,8 @@ const useFirebase = () => {
     logOut,
     userSignUp,
     userLogIn,
-    isLoading,setIsLoading
+    isLoading,
+    setIsLoading,
   };
 };
 
